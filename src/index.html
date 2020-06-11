@@ -1,0 +1,249 @@
+<html>
+  <head>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="weather-interface.js"></script> -->
+      <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Conga</title>
+  </head>
+  <body>
+    <!-- <div class="container"> -->
+    <div class="jumbotron">
+      <div class="row">
+        <div class="col-lg-2">
+          <img src="https://www.netclipart.com/pp/m/329-3299269_conga-line-conga-line-clip-art.png" class="imgLogo" width="150" height="150"> 
+        </div>
+        <div class="col-lg-10">
+          <h1>Conga Dashboard</h1>
+        </div>
+        </div>
+        
+      </div>
+    </div>
+          <!-- Macroaxis Widget Start -->
+          <script src="https://www.macroaxis.com/widgets/url.jsp?t=42"></script><div class="macroaxis-copyright"></div>
+          <!-- Macroaxis Widget End -->
+       
+          <div class="section collapsible">
+      
+            <div class="container">
+            <div class="section collapsible">
+              <div class="container4">
+                <div class="row">
+                  <div class="col-lg-3">
+                <textarea class="expand">Notepad    </textarea>
+                </div>
+                <div class="col-lg-3">
+                    <div class="expand">
+                    <div id="MyClockDisplay" class="clock" onload="showTime()" style="background-color: black;"></div>
+                    
+
+                  </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FLos_Angeles&amp;src=amJpcmQyMDZAZ21haWwuY29t&amp;src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%237986CB&amp;color=%2333B679&amp;color=%230B8043" style="border:solid 1px #777" width="200" height="200" class="expand" frameborder="0" scrolling="no"></iframe>
+                    </div>
+                    <div class="col-lg-3">
+                    <table border="1" class="expand"> 
+                      <tr> 
+                         <td colspan="3"><input type="text" width="60" id="result"/></td> 
+                         <td><input type="button" value="c" onclick="clr()"/> </td> 
+                         <td><input type="button" value="+" onclick="dis('+')"/> </td>
+                      </tr> 
+                      <tr> 
+                         <td><input type="button" value="1" onclick="dis('1')"/> </td> 
+                         <td><input type="button" value="2" onclick="dis('2')"/> </td> 
+                         <td><input type="button" value="3" onclick="dis('3')"/> </td>
+                         <td><input type="button" value="4" onclick="dis('4')"/> </td>
+                         <td><input type="button" value="5" onclick="dis('5')"/> </td>
+                      </tr> 
+                      <tr> 
+                        <td><input type="button" value="6" onclick="dis('6')"/> </td>  
+                         <td><input type="button" value="7" onclick="dis('7')"/> </td> 
+                         <td><input type="button" value="8" onclick="dis('8')"/> </td> 
+                         <td><input type="button" value="9" onclick="dis('9')"/> </td> 
+                         <td><input type="button" value="0" onclick="dis('0')"/> </td> 
+                          
+                         
+                      </tr> 
+                      <tr> 
+                        <td><input type="button" value="-" onclick="dis('-')"/> </td> 
+                         <td><input type="button" value="." onclick="dis('.')"/> </td> 
+                         
+                         <td><input type="button" value="/" onclick="dis('/')"/> </td> 
+                         <td><input type="button" value="=" onclick="solve()"/> </td> 
+                         <td><input type="button" value="x" onclick="dis('*')"/> </td> 
+                      </tr> 
+                    </table>
+                    
+                  </div>
+                
+              </div>
+                </div>
+                   
+                  </div>
+                
+                </div>
+                
+                  </div>
+    <div style="display: flex;">
+      <!-- Sidebar ////////////////////////////////////////////////////////////////////////-->
+      <aside style="width: 30%;">
+        <div class="flex-container">
+          <div class="w3-row">
+            <div class="w3-col">
+              <details>
+                <summary>Sidebar</summary>
+                <p>Use the buttons to customize your dashboard experience.</p>
+              </details>
+            </div>
+            <div class="w3-col">
+              <form class="box">
+                <input type="text" placeholder="Username" name="username">
+                <input type="text" placeholder="Password" name="psw">
+                <button type="submit">Login</button>
+              </form>
+            </div>
+            <div class="w3-col">
+              <button id="toggle-button" class="toggle">Toolbar</button>
+            </div>
+            <div class="container5">
+              <div class="row">
+                <div class="col-md-6">
+                  <hr>
+                  <h3>Add Contact</h3>
+                  <form id="new-contact">
+                    <div class="form-group">
+                      <!-- <label for="new-first-name">First Name</label> -->
+                      <input type="text" placeholder="First Name"  class="form-control" id="new-first-name">
+                    </div>
+                    <div class="form-group">
+                      <!-- <label for="new-last-name">Last Name</label> -->
+                      <input type="text" placeholder="Last Name"  class="form-control" id="new-last-name">
+                    </div>
+                    <div class="form-group">
+                      <!-- <label for="new-phone-number">Phone Number</label> -->
+                      <input type="text" placeholder="Phone Number" class="form-control" id="new-phone-number">
+                    </div>
+                    <div class="form-group">
+                      <!-- <label for="new-email-address">Email Address</label> -->
+                      <input type="text" placeholder="Email" class="form-control" id="new-email-address">
+                    </div>
+                    <div class="form-group">
+                      <!-- <label for="new-physical-address">Home Address</label> -->
+                      <input type="text" placeholder="address" class="form-control" id="new-physical-address">
+                    </div>
+                    <button type="submit" class="btn-primary">Add</button>
+                  </form>
+            </div>
+            
+                  
+                  
+                  <div class="col-md-6">
+                    <h3>Contacts</h3>
+                  <ul id="contacts">  
+                  </ul>
+                
+                
+                  <div id="show-contact">
+                    <p>First Name: <span class="first-name"></span></p>
+                    <p>Last Name: <span class="last-name"></span></p>
+                    <p>Phone Number: <span class="phone-number"></span></p>
+                    <p>Email Address: <span class="email-address"></span></p> 
+                    <p>Home Address: <span class ="physical-address"></span></p>                        
+                    <div id="buttons">
+                    </div>
+                  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+        </div>
+      </aside>
+  
+      <!-- ////////////////////////////////////////Main///////////////////////////////////// --> 
+      <main style="flex: 1;overflow: auto;">
+        <!-- <div class="container"> -->
+ 
+         
+          <div class="flex-container">
+            <div class="w3-row">
+              <div class="w3-col">
+            <iframe name="Framename" src="https://www.king5.com/traffic-cameras" tabindex="0" class="frame-area"  sandbox="allow-scripts" frameborder="0"></iframe>
+              </div>
+              <div class="w3-col">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d172139.4161662446!2d-122.48214752341369!3d47.61294318323425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490102c93e83355%3A0x102565466944d59a!2sSeattle%2C%20WA!5e0!3m2!1sen!2sus!4v1591293734795!5m2!1sen!2sus" width="400" height="300" class="frame-area" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+            </div>
+
+    <!-- <div class="container"> -->
+      <!-- <div class="container"> -->
+      <!-- <div class="row"> -->
+        <div class="w3-col">
+        <div class="container2">
+      <h2> Weather </h2>
+    
+    <br>
+    <hr>
+      <label for="location">Enter a city:</label>
+      <input id="location" type="text">
+      <button  id="weatherLocation">weather</button>
+      <div class="errors"></div>
+      <!-- <div class="container3"> -->
+      <div class="showHumidity"></div>
+      <div class="showTemp"></div>
+     
+     </div>
+     
+    </div> 
+  
+  <div class="w3-col">
+      <div class="container2">
+        <h2>Search GIF</h2>
+    
+    <br>
+    <hr>
+    <form>
+      <label for="search">Search</label>
+      <input id="search" type="text" />
+      <button id="btnSearch">Go</button>
+    </form>
+    <div class="out"></div>
+  </div>
+  </div>
+  </div>
+</div>
+</body>
+</main>
+<!-- //////////////////calculator script/////////////////////// -->
+<script> 
+  //function that display value 
+  function dis(val) 
+  { 
+      document.getElementById("result").value+=val 
+  } 
+    
+  //function that evaluates the digit and return result 
+  function solve() 
+  { 
+      let x = document.getElementById("result").value 
+      let y = eval(x) 
+      document.getElementById("result").value = y 
+  } 
+    
+  //function that clear the display 
+  function clr() 
+  { 
+      document.getElementById("result").value = "" 
+  } 
+</script> 
+
+ 
+  
+</html>
