@@ -4,8 +4,8 @@
   margin: 20px;
   padding: 20px;
   border-radius: 10px;
-  width: 400px;
-  height: 300px;
+  /* width: 400px;
+  height: 300px; */
 }
 
 
@@ -37,6 +37,7 @@
   font-family: Orbitron;
   border-radius: 10px;
   width: 400px;
+  border: 2px solid rgb(30, 206, 250);
 
 }
 
@@ -56,14 +57,27 @@ h1 {
   font-family: 'Trebuchet MS';
 }
 
+h2 {
+  font-family: 'Trebuchet MS';
+}
+
+h3 {
+  font-family: 'Trebuchet MS';
+}
+
 body {
   background-color: rgb(192, 189, 189);
 }
 
 img {
-  border-radius:50%;
   height:100px;
   width:100px;
+}
+
+.imglogo {
+  border-radius:50%;
+  height:200px;
+  width:200px;
 }
 
 ul {
@@ -122,11 +136,11 @@ textarea {
   max-width: 400px;
   height: 300px;
   overflow: auto;  /* EDIT TO hidden FOR NO SCROLLBAR */
-  border: #999999 2px solid;
-  margin: 20px;
+  border: #585252 2px solid;
+  margin: 5px;
   padding: 0px;
   box-shadow: 5px 5px 10px;
-  border-radius: 4px;
+  border-radius: 10px;
   }
 
 p {
@@ -189,6 +203,7 @@ height: 200px;
 
 .jumbotron {
   background: #ee7a0d;
+  margin-bottom: 5px;
 }
 
 table {
@@ -215,7 +230,7 @@ input[type="text"] {
   background-repeat: repeat;
   background-position: 0 0;
   background-size: 100% 30px;
-  text-align: center;
+  /* text-align: center; */
   -webkit-text-fill-color: rgb(40, 44, 41);
   -webkit-background-clip: text;
   -webkit-animation: stripes 5s linear infinite;
@@ -233,7 +248,7 @@ input[type="text"] {
   transition: all 2s ease;  
   display: inline-block;
   background-color: rgb(236, 151, 24);
-  height: 200px;
+  /* height: 200px; */
   width: 200px;
   margin: 20px;
   object-fit: contain;
@@ -243,8 +258,8 @@ input[type="text"] {
 }
 
 .box:hover {
-  width: 600px;
-  height: 300px;
+  width: 400px;
+  height: 200px;
 }
 
 #show-contact {
@@ -253,17 +268,29 @@ input[type="text"] {
 
 .grid-container {
   display: grid;
-  grid-template-columns: auto auto auto;
-  grid-gap: 10px;
-  background-color: #2196F3;
-  padding: 10px;
+  grid-column-gap: 25px;
+  grid-template-columns: 350px 350px auto;
+  
+  /* grid-gap: 5px; */
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid #e79f1a;
 }
 
 .grid-container > div {
-  background-color: rgba(255, 255, 255, 0.8);
-  text-align: center;
-  padding: 20px 0;
-  font-size: 30px;
+  padding: 5px 0;
+}
+
+
+
+.item1 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.item2 {
+  grid-column-start: 2;
+  grid-column-end: 3;
 }
 
 

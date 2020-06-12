@@ -5,6 +5,8 @@
     <script type="text/javascript" src="weather-interface.js"></script> -->
       <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+     <!-- Initialize Firebase -->
+  
     <title>Conga</title>
   </head>
   <body>
@@ -15,7 +17,7 @@
           <img src="https://www.netclipart.com/pp/m/329-3299269_conga-line-conga-line-clip-art.png" class="imgLogo" width="150" height="150"> 
         </div>
         <div class="col-lg-10">
-          <h1>Conga Dashboard</h1>
+          <h1>Conga Dashboard!</h1>
         </div>
         </div>
         
@@ -25,14 +27,16 @@
           <script src="https://www.macroaxis.com/widgets/url.jsp?t=42"></script><div class="macroaxis-copyright"></div>
           <!-- Macroaxis Widget End -->
        
-          <div class="section collapsible">
+        
       
             <div class="container">
+              
             <div class="section collapsible">
               <div class="container4">
                 <div class="row">
+                  
                   <div class="col-lg-3">
-                <textarea class="expand">Notepad    </textarea>
+                     <textarea class="expand">   Notepad   </textarea>
                 </div>
                 <div class="col-lg-3">
                     <div class="expand">
@@ -89,8 +93,8 @@
                   </div>
     <div style="display: flex;">
       <!-- Sidebar ////////////////////////////////////////////////////////////////////////-->
-      <aside style="width: 30%;">
-        <div class="flex-container">
+      <aside style="width: 20%;">
+        <div class="grid-container">
           <div class="w3-row">
             <div class="w3-col">
               <details>
@@ -106,7 +110,7 @@
               </form>
             </div>
             <div class="w3-col">
-              <button id="toggle-button" class="toggle">Toolbar</button>
+              <button id="toggle-button" class="toggle"> Collapse Toolbar</button>
             </div>
             <div class="container5">
               <div class="row">
@@ -172,49 +176,59 @@
         <!-- <div class="container"> -->
  
          
-          <div class="flex-container">
-            <div class="w3-row">
-              <div class="w3-col">
+          <!-- <div class="flex-container"> -->
+            <div class="grid-container">
+            <!-- <div class="w3-row">
+              <div class="w3-col"> -->
+                <div class="item1">
             <iframe name="Framename" src="https://www.king5.com/traffic-cameras" tabindex="0" class="frame-area"  sandbox="allow-scripts" frameborder="0"></iframe>
-              </div>
-              <div class="w3-col">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d172139.4161662446!2d-122.48214752341369!3d47.61294318323425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490102c93e83355%3A0x102565466944d59a!2sSeattle%2C%20WA!5e0!3m2!1sen!2sus!4v1591293734795!5m2!1sen!2sus" width="400" height="300" class="frame-area" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+              <!-- </div> -->
             </div>
+              <!-- <div class="w3-col"> -->
+                <div class="item2">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d172139.4161662446!2d-122.48214752341369!3d47.61294318323425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490102c93e83355%3A0x102565466944d59a!2sSeattle%2C%20WA!5e0!3m2!1sen!2sus!4v1591293734795!5m2!1sen!2sus" width="400" height="300" class="frame-area" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <!-- </div> -->
+          </div>
+          <div class="item3">
+            <iframe src="https://www.bing.com/translator" width="400" height="300" class="frame-area" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <!-- </div> -->
+          </div>
+          
             </div>
 
     <!-- <div class="container"> -->
       <!-- <div class="container"> -->
       <!-- <div class="row"> -->
-        <div class="w3-col">
+        <!-- <div class="w3-col"> -->
+          <div class="grid-container">
+            <div class="grid-item">
         <div class="container2">
       <h2> Weather </h2>
-    
-    <br>
     <hr>
       <label for="location">Enter a city:</label>
       <input id="location" type="text">
-      <button  id="weatherLocation">weather</button>
+      <button  id="weatherLocation">Weather</button>
       <div class="errors"></div>
-      <!-- <div class="container3"> -->
       <div class="showHumidity"></div>
       <div class="showTemp"></div>
      
-     </div>
+    </div>
+     <!-- </div> -->
      
     </div> 
   
-  <div class="w3-col">
+  <div class="grid-item">
       <div class="container2">
-        <h2>Search GIF</h2>
-    
-    <br>
+        <h2>GIFs</h2>
     <hr>
-    <form>
+    <!-- <form> -->
       <label for="search">Search</label>
       <input id="search" type="text" />
       <button id="btnSearch">Go</button>
-    </form>
-    <div class="out"></div>
+      <div class="out"></div>
+    <!-- </form> -->
+    
+      </div>
   </div>
   </div>
   </div>
@@ -242,8 +256,23 @@
   { 
       document.getElementById("result").value = "" 
   } 
-</script> 
+</script>
+<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase.js"></script>
+  <script>
+  // Your web app's Firebase configuration
 
- 
+  var app = firebase.initializeApp({
+    apiKey: "AIzaSyAlEwKfPbEbX-N_JI5IVK-pxNNwR9B13wo",
+    authDomain: "conga-1a2fe.firebaseapp.com",
+    databaseURL: "https://conga-1a2fe.firebaseio.com",
+    projectId: "conga-1a2fe",
+    storageBucket: "conga-1a2fe.appspot.com",
+    messagingSenderId: "765021567556",
+    appId: "1:765021567556:web:7bb254bdaaf84d79bb5a11",
+    measurementId: "G-XGC50ZTY23"
+  });
+  firebase.initializeApp(config);
+  require("firebase/database");
+</script>
   
 </html>

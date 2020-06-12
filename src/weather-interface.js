@@ -9,6 +9,29 @@ import "./../src/adrsbook.js";
 //import "bootstrap/dist/css/bootstrap.min.css";
 import { WeatherService } from "./weather-service.js";
 import { GifService } from "./../src/gif-service.js";
+// import { ReactReduxFirebaseProvider } from 'react-redux-firebase';
+// import { createFirestoreInstance } from 'redux-firestore';
+// import firebase from "./../src/firebase";
+
+// const store = createStore(rootReducer);
+
+// const rrfProps = {
+//   firebase,
+//   config: {
+//         userProfile: "users"
+//     },
+//   dispatch: store.dispatch,
+//   createFirestoreInstance
+// }
+
+// ReactDOM.render(
+//   <Provider store={store}>
+//     <ReactReduxFirebaseProvider {...rrfProps}>
+//       <App />
+//     </ReactReduxFirebaseProvider>
+//   </Provider>,
+//   document.getElementById('root')
+// )
 
 $(document).ready(function () {
   $("#weatherLocation").click(function () {
