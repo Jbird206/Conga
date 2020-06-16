@@ -6,6 +6,7 @@ import "./../src/gifscript.js";
 import "./../src/collapse.js";
 import "./../src/clock.js";
 import "./../src/adrsbook.js";
+import "./../src/firebase.js";
 //import "bootstrap/dist/css/bootstrap.min.css";
 import { WeatherService } from "./weather-service.js";
 import { GifService } from "./../src/gif-service.js";
