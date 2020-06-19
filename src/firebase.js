@@ -1,3 +1,5 @@
+
+/* eslint-disable */
 // Initialize Firebase
 var config = {
     apiKey: "AIzaSyAlEwKfPbEbX-N_JI5IVK-pxNNwR9B13wo",
@@ -72,7 +74,7 @@ function clickSignupButton(){
 function clickSignoutButton(){
   auth.signOut()
 }
-
+$(document).ready(function() {
 // •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 // singin form
 // •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
@@ -94,3 +96,4 @@ function clickSigninButton() {
   });
 
 }
+})

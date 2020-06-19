@@ -6,8 +6,8 @@
       <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
      <!-- Initialize Firebase -->
-     <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
-     <script type="text/javascript" src="app.js"></script>
+     <!-- <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script> -->
+     <!-- <script type="text/javascript" src="app.js"></script> -->
     <title>Conga</title>
   </head>
   <body>
@@ -183,7 +183,7 @@
               <div class="w3-col"> -->
                 <div class="item1">
             <iframe name="Framename" src="https://www.king5.com/traffic-cameras" tabindex="0" class="frame-area"  sandbox="allow-scripts" frameborder="0"></iframe>
-              <!-- </div> -->
+              <center><button>wqew</button></center>
             </div>
               <!-- <div class="w3-col"> -->
                 <div class="item2">
@@ -194,7 +194,8 @@
             <iframe src="https://www.bing.com/translator" width="400" height="300" class="frame-area" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
             <!-- </div> -->
           </div>
-          
+       
+
             </div>
 
     <!-- <div class="container"> -->
@@ -228,12 +229,19 @@
       <button id="btnSearch">Go</button>
       <div class="out"></div>
     <!-- </form> -->
-    
       </div>
+  </div>
+      <div class="grid-item">
+      <div class="container2">
+      <h3 id="progress">JavaScript is turned off, or your browser is realllllly slow</h3>
+      </div>
+      
+    </div>
   </div>
   </div>
   </div>
 </div>
+
 <h3>Firebase</h3>
     <em>Username and Password Authentication</em>
       <hr>
@@ -259,8 +267,7 @@
       <button type="button" name="button" id="signin">Singin</button>
     </div>
     <hr/>
-</body>
-</main>
+
 <!-- //////////////////calculator script/////////////////////// -->
 <script> 
   //function that display value 
@@ -283,7 +290,74 @@
       document.getElementById("result").value = "" 
   } 
 </script>
+<!-- ////////////////////internet speed/////////////////// -->
+<script>//JUST AN EXAMPLE, PLEASE USE YOUR OWN PICTURE!
+  var imageAddr = "http://www.turboacs.com/tac_2012_2t.jpg"; 
+  var downloadSize = 4995374; //bytes
+  
+  function ShowProgressMessage(msg) {
+      if (console) {
+          if (typeof msg == "string") {
+              console.log(msg);
+          } else {
+              for (var i = 0; i < msg.length; i++) {
+                  console.log(msg[i]);
+              }
+          }
+      }
+      
+      var oProgress = document.getElementById("progress");
+      if (oProgress) {
+          var actualHTML = (typeof msg == "string") ? msg : msg.join("<br />");
+          oProgress.innerHTML = actualHTML;
+      }
+  }
+  
+  function InitiateSpeedDetection() {
+      ShowProgressMessage("Loading the image, please wait...");
+      window.setTimeout(MeasureConnectionSpeed, 1);
+  };    
+  
+  if (window.addEventListener) {
+      window.addEventListener('load', InitiateSpeedDetection, false);
+  } else if (window.attachEvent) {
+      window.attachEvent('onload', InitiateSpeedDetection);
+  }
+  
+  function MeasureConnectionSpeed() {
+      var startTime, endTime;
+      var download = new Image();
+      download.onload = function () {
+          endTime = (new Date()).getTime();
+          showResults();
+      }
+      
+      download.onerror = function (err, msg) {
+          ShowProgressMessage("Invalid image, or error downloading");
+      }
+      
+      startTime = (new Date()).getTime();
+      var cacheBuster = "?nnn=" + startTime;
+      download.src = imageAddr + cacheBuster;
+      
+      function showResults() {
+          var duration = (endTime - startTime) / 1000;
+          var bitsLoaded = downloadSize * 8;
+          var speedBps = (bitsLoaded / duration).toFixed(2);
+          var speedKbps = (speedBps / 1024).toFixed(2);
+          var speedMbps = (speedKbps / 1024).toFixed(2);
+          ShowProgressMessage([
+              "<h2>Your connection speed is:</h2><hr>", 
+             
+              speedBps + " bps", 
+              speedKbps + " kbps", 
+              speedMbps + " Mbps"
+          ]);
+      }
+  }</script>
+
 <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase.js"></script>
 <script type="text/javascript" src="app.js"></script>
-  
+</body>
+</main>
 </html>
