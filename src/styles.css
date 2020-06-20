@@ -4,6 +4,8 @@
   margin: 20px;
   padding: 20px;
   border-radius: 10px;
+  width: 300px;
+  border: 1px solid #e79f1a;
   /* width: 400px;
   height: 300px; */
 }
@@ -24,7 +26,7 @@
   box-shadow: 5px 5px 10px;
   margin: 10px;
   padding: 10px;
-  font-family: Orbitron;
+  /* font-family: Orbitron; */
   border-radius: 10px;
   width: 1000px;
 }
@@ -32,11 +34,11 @@
 .container5 {
   background-color:  rgba(235, 210, 128, 0.7);
   box-shadow: 5px 5px 10px;
-  margin: 10px;
-  padding: 10px;
+  margin: 20px;
+  padding: 20px;
   font-family: Orbitron;
   border-radius: 10px;
-  width: 400px;
+  width: 300px;
   border: 2px solid rgb(30, 206, 250);
 
 }
@@ -52,8 +54,8 @@ h1 {
   text-align: left;
   font-size: 50px;
   color:white;
-  margin-top: 30px;
-  margin-right: 2600px;
+  margin-top: 60px;
+  margin-right: 3100px;
   font-family: 'Trebuchet MS';
 }
 
@@ -111,7 +113,7 @@ button:hover {
 
 button:active {
   background-color: #3e8e41;
-  box-shadow: 0 5px #666;
+  box-shadow: 0 5px #666;  
   transform: translateY(4px);
 }
 
@@ -120,11 +122,15 @@ button:active {
 }
 
 
+
+
 input[type="text"] {
   border: 2px solid rgb(0, 255, 255);
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 4px;
+  width:100px;
 }
+
 
 textarea {
   background-color: rgb(255, 217, 0);
@@ -138,7 +144,7 @@ textarea {
   height: 300px;
   overflow: auto;  /* EDIT TO hidden FOR NO SCROLLBAR */
   border: #585252 2px solid;
-  margin: 5px;
+  margin: 35px;
   padding: 0px;
   box-shadow: 5px 5px 10px;
   border-radius: 10px;
@@ -191,7 +197,7 @@ label {
   height: 100px;
   background: rgb(10, 10, 10)(36, 30, 30);
   transition: all .5s ease-out;
-  border: #faf6f6 2px solid;
+  border: 2px solid rgb(0, 255, 255);
   object-fit: contain;
 }
 
@@ -212,18 +218,15 @@ table {
   height: 150px;
 }
 
-input[type="text"] {
-  border: 2px solid rgb(0, 255, 255);
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border-radius: 4px;
-  width:100px;
+#t01 tr:nth-child(even) {
+  background-color: rgb(131, 119, 119);
+}
+#t01 tr:nth-child(odd) {
+ background-color: rgb(131, 119, 119);
 }
 
+
 .clock {
-  /* position: absolute;
-  top: 100%;
-  left: 50%; */
-  /* transform: translateX(-50%) translateY(-50%); */
   margin: 20px;
   background-color: rgb(36, 233, 18);
   color: #191a19;
@@ -287,11 +290,34 @@ input[type="text"] {
 .item1 {
   grid-column-start: 1;
   grid-column-end: 2;
+  margin: 20px;
 }
 
 .item2 {
   grid-column-start: 2;
   grid-column-end: 3;
+  margin: 20px;
+
 }
+
+.item3 {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  margin: 20px;
+}
+
+
+
+canvas {
+	position: absolute;
+	width: 500px;
+	height: 500px;
+  background: #262626;
+  margin: 10px;
+  border: 1px solid #e79f1a;
+}
+
+
+
 
 

@@ -6,11 +6,10 @@ import "./../src/gifscript.js";
 import "./../src/collapse.js";
 import "./../src/clock.js";
 import "./../src/adrsbook.js";
-// import "./../src/app.js";
-// import "./../src/firebase.js";
+import "./../src/firebase.js";
 //import "bootstrap/dist/css/bootstrap.min.css";
 import { WeatherService } from "./weather-service.js";
-import { GifService } from "./../src/gif-service.js";
+
 
 $(document).ready(function () {
   $("#weatherLocation").click(function () {
@@ -42,26 +41,7 @@ $(document).ready(function () {
 
 
 
-    ////////////////////////////////////////////////
-    $("#gifNamed").click(function () {
-      const name = $("#namedGif").val();
-      $("#namedGif").val("");
 
-      (async () => {
-        let gifService = new GifService();
-        const gifResponse = await gifService.getGifByName(name);
-        getElements(gifResponse);
-      })();
-
-      function getElements(gifResponse) {
-        if (gifResponse) {
-          $(".showGif").html(
-            `<img src=${gifResponse.content.data[0].images.downsized.url}`
-          );
-        } else {
-          $(".showGif").text(`There was an error handling your request.`);
-        }
-      }
     });
   });
-});
+

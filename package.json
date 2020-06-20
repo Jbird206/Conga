@@ -1,7 +1,7 @@
 {
   "name": "haiku",
   "version": "1.0.0",
-  "description": "haiku testing",
+  "description": "dashboard app",
   "main": "weather-interface.js",
   "scripts": {
     "build": "webpack --mode development",
