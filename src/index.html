@@ -1,14 +1,13 @@
 <html>
 
 <head>
-  <link href="styles.css" rel="stylesheet" type="text/css">
   
+  <link href="styles.css" rel="stylesheet" type="text/css">
+  <!-- <link id="theme" rel="stylesheet" type="text/css" href="light-theme.css"> -->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <!-- Initialize Firebase -->
-  <!-- <script src="https://www.gstatic.com/firebasejs/7.15.3/firebase-app.js"></script> -->
-  <!-- <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script> -->
-  <!-- <script type="text/javascript" src="app.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.6/lib/darkmode-js.min.js"></script>
+
 
   <title>Conga</title>
 </head>
@@ -114,25 +113,51 @@
              
                 <p>Use the buttons to customize your dashboard experience.</p>
               </details>
-              <button id="toggle-button" class="toggle"> Toolbar</button>
+              <center><button id="toggle-button" class="toggle"> Toolbar</button></center>
+              
+              <nav>
+                <div class="theme-switch-wrapper">
+                     <label class="theme-switch" for="checkbox">
+                  <input type="checkbox" id="checkbox" />
+                  <div class="slider round"></div>
+                </label>
+                 <em>Enable Dark Mode!</em>
+                </div>
+              
+              </nav> 
             </div>
           </div>
-          <div class="w3-col">
+          <!-- <div class="container"> -->
             <div class="container2">
-              <script type="text/javascript">
-                var userip;
-              </script>
+              <!-- <div class="container"> -->
+                    <h3> Firebase</h3>
+               <em>Log in and sign up</em>
+                  <hr>
+            
+                <p>
+                  <p id="current-email" style="display:none"></p>
+                  <button type="button" id="signout" style="display:none">Sign out</button>
+                </p>
+            
+                <div id="signup-form">
+                  <h4>signup form</h4>
+                  <input type="text" id="username" placeholder="enter a username"/><br/>
+                  <input type="email" id="email" placeholder="enter your email"><br/>
+                  <input type="password" id="password" placeholder="enter your password"/><br/>
+                  <button type="button" name="button" id="signup">Sign up</button>
+                </div>
+            
               
-              <script type="text/javascript" src="https://l2.io/ip.js?var=userip"></script>
-              
-              <script type="text/javascript">
-                document.write("<h4>Your IP is: </h4><hr>", userip);
-              </script>
-              <br>
-              <hr>
-              <h3 id="progress">JavaScript is turned off, or your browser is realllllly slow</h3>
-            </div>
-          </div>
+                <div id="signin">
+                <h4>sign in</h4>
+                  <input type="email" id="signinEmail" placeholder="your email"><br/>
+                  <input type="password" id="signinPassword" placeholder="your password"/><br/>
+                  <button type="button" name="button" id="signin">Sign in</button>
+                </div>
+              </div>
+            <!-- </div> -->
+            <!-- </div> -->
+         
           <div class="w3-col">
 
           </div>
@@ -213,11 +238,11 @@
         <div class="item2">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d172139.4161662446!2d-122.48214752341369!3d47.61294318323425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490102c93e83355%3A0x102565466944d59a!2sSeattle%2C%20WA!5e0!3m2!1sen!2sus!4v1591293734795!5m2!1sen!2sus"
-            width="400" height="300" class="frame-area" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+             class="frame-area" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 
         </div>
         <div class="item3">
-          <iframe src="https://spaceneedle.roundshot.com/" width="400" height="300" class="frame-area"
+          <iframe src="https://spaceneedle.roundshot.com/"  class="frame-area"
             allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 
         </div>
@@ -228,7 +253,7 @@
 
       <div class="grid-container">
         <div class="item1">
-          <div class="container2">
+          <div class="container22">
             <h2> Weather </h2>
             <hr>
             <label for="location">Enter a city:</label>
@@ -244,7 +269,7 @@
         </div>
 
         <div class="item2">
-          <div class="container2">
+          <div class="container22">
             <h2>GIFs</h2>
             <hr>
 
@@ -256,7 +281,22 @@
           </div>
         </div>
         <div class="item3">
-
+          <div class="w3-col">
+            <div class="container22">
+              <script type="text/javascript">
+                var userip;
+              </script>
+              
+              <script type="text/javascript" src="https://l2.io/ip.js?var=userip"></script>
+              
+              <script type="text/javascript">
+                document.write("<h4>Your IP is: </h4><hr>", userip);
+              </script>
+              <br>
+              <hr>
+              <h3 id="progress">JavaScript is turned off, or your browser is realllllly slow</h3>
+            </div>
+          </div>
 
         </div>
         
@@ -265,37 +305,10 @@
         </div>
         </div>
 
-        <h3>Firebase</h3>
-    <em>Username and Password Authentication</em>
-      <hr>
-
-    <p>
-      <p id="current-email" style="display:none"></p>
-      <button type="button" id="signout" style="display:none">Signout</button>
-    </p>
-
-    <div id="signup-form">
-      <h4>signup form</h4>
-      <input type="text" id="username" placeholder="enter a username"/><br/>
-      <input type="email" id="email" placeholder="enter your email"><br/>
-      <input type="password" id="password" placeholder="enter your password"/><br/>
-      <button type="button" name="button" id="signup">Signup</button>
-    </div>
-
-  
-    <div id="signin">
-    <h4>signin</h4>
-      <input type="email" id="signinEmail" placeholder="enter your email"><br/>
-      <input type="password" id="signinPassword" placeholder="enter your password"/><br/>
-      <button type="button" name="button" id="signin">Singin</button>
-    </div>
-        
     <!-- //////////////////////////firebase/////////////////////// -->
-    <!-- <script src="https://www.gstatic.com/firebasejs/7.15.3/firebase-app.js"></script> -->
-    <!-- <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script> -->
-    <script src="https://www.gstatic.com/firebasejs/3.6.5/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.5/firebase.js"></script>  
 <script>
-  var ref = new Firebase("https://conga-1a2fe.firebaseio.com")
+  // var ref = new Firebase("https://conga-1a2fe.firebaseio.com")
 // Initialize Firebase
 var config = {
   apiKey: "AIzaSyAlEwKfPbEbX-N_JI5IVK-pxNNwR9B13wo",
@@ -325,7 +338,69 @@ auth.onAuthStateChanged(firebaseUser => {
   }
 
 });
+
+  // •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+// signup form
+// •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+
+	var singoutButton = document.querySelector("#signout");
+	var currentEmail = document.querySelector("#current-email");
+	
+	var singupForm = document.querySelector("#signup-form");
+	var userName = document.querySelector("#username");
+	var email = document.querySelector("#email");
+	var password = document.querySelector("#password");
+	var singupButton = document.querySelector("#signup");
+	
+	
+	singupButton.addEventListener("click", clickSignupButton);
+	singoutButton.addEventListener("click", clickSignoutButton);
+	
+	
+	function clickSignupButton(){
+	
+	  //signup firebase method
+	  auth.createUserWithEmailAndPassword(email.value, password.value).
+	  then(function(user){
+		console.log(auth.currentUser.email)
+	
+	
+	  }, function(error) {
+		console.log(error.message);
+		// error message show that you need to enable that authentication in firebase
+	  });
+	
+	}
+	
+	function clickSignoutButton(){
+	  auth.signOut()
+	}
+	
+	// •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+	// singin form
+	// •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+	var signinEmail = document.querySelector("#signinEmail");
+	var signinPassword = document.querySelector("#signinPassword");
+	var singinButton = document.querySelector("#signin");
+	
+	singinButton.addEventListener("click", clickSigninButton);
+	
+	
+	function clickSigninButton() {
+	
+	  auth.signInWithEmailAndPassword(signinEmail.value, signinPassword.value).
+	  then(function(user){
+		console.log(user)
+	  }, function(error) {
+		console.log(error.message);
+		// error message show that you need to enable that authentication in firebase
+	  });
+	}
+
 </script>
+
+
 
 
         <!-- //////////////////calculator script/////////////////////// -->
@@ -414,7 +489,7 @@ auth.onAuthStateChanged(firebaseUser => {
 
         
         
-        
+
 </body>
 </main>
 

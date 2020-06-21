@@ -2,14 +2,15 @@ import $ from "jquery";
 import "./styles.css";
 import "bootstrap";
 import "./../src/styles.css";
+// import "./../src/light-theme.css";
 import "./../src/gifscript.js";
 import "./../src/collapse.js";
 import "./../src/clock.js";
 import "./../src/adrsbook.js";
-import "./../src/firebase.js";
+import "./../src/app.js";
 //import "bootstrap/dist/css/bootstrap.min.css";
 import { WeatherService } from "./weather-service.js";
-
+// import {app} from "/.app.js";
 
 $(document).ready(function () {
   $("#weatherLocation").click(function () {
