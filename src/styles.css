@@ -34,13 +34,14 @@
 }
 
 .container4 {
-  background:  #607744;
+  background:   #76f1ce;
   box-shadow: 5px 5px 10px;
   margin: 10px;
   padding: 10px;
   /* font-family: Orbitron; */
   border-radius: 10px;
   width: 1000px;
+  border: 2px solid rgb(30, 206, 250);
 }
 
 .container5 {
@@ -66,7 +67,7 @@ h1 {
   text-align: left;
   font-size: 70px;
   color:white;
-  margin-top: 60px;
+  margin-top: 30px;
   margin-right: 3100px;
   font-family: 'Trebuchet MS';
 }
@@ -92,8 +93,8 @@ img {
 
 .imglogo {
   border-radius:50%;
-  height:200px;
-  width:200px;
+  height: 150px;
+  width:150px;
   border: 2px solid rgb(30, 206, 250);
   margin-left: 30px;
 }
@@ -183,10 +184,10 @@ p {
   margin: 20px;
 }
 
-label {
+/* label {
   margin: 20px;
   @import url(http://fonts.googleapis.com/css?family=Open + Sans:800);
-  background-image: -webkit-linear-gradient(rgb(9, 14, 53) 50%, white 50%);
+  background-image: white 50%);
   background-repeat: repeat;
   background-position: 0 0;
   background-size: 100% 50px;
@@ -194,7 +195,8 @@ label {
   -webkit-background-clip: text;
   -webkit-animation: stripes 2s linear infinite;
   animation: stripes 2s linear infinite;
-}
+  color: white;
+} */
 
 @-webkit-keyframes stripes {
   100% {
@@ -226,7 +228,7 @@ label {
   height: 100px;
   background: rgb(10, 10, 10)(36, 30, 30);
   transition: all .5s ease-out;
-  border: 2px solid rgb(0, 255, 255);
+  border: 2px solid rgb(17, 59, 59);
   object-fit: contain;
 }
 
@@ -240,7 +242,7 @@ height: 200px;
 .jumbotron {
   background: #8AEA92;
   margin: 5px;
-  height: 300px;
+  height: 250px;
 }
 
 table {
